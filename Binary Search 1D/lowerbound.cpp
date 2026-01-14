@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Lower bound --> First or the smallesr index in a sorted array where the value 
+// Lower bound --> First or the smallest index in a sorted array where the value 
 // at that index is the greater than or equal to  a given key x
 class Lowerbound{
     public :
