@@ -35,5 +35,18 @@ Node* rearrangeEvenOdd(Node* head){
 
 
 }
+void rearrangeEvenOdd2(Node *head) {
+        // Your Code here
+        Node* prev=head;
+        Node* curr=head->next;
+        Node* secondHead=head->next;
+        while(curr!=NULL && curr->next!=NULL){
+            prev->next=curr->next;
+            prev=curr->next;
+            curr->next=prev->next;
+            curr=prev->next;
+        }
+        prev->next=secondHead;
+}
 //TC : O(n)
 //SC: O(n)
