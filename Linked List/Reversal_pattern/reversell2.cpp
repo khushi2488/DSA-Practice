@@ -28,3 +28,38 @@ Node* reversebetween(Node* head , int a , int b){
 }
 //TC :O(N)
 //SC :O(N)
+
+
+Node* reversebetween(Node* head,int a ,int b){
+  if(!head ||a==b){
+    return head;
+  }
+    Node* prev=NULL;
+    Node* curr=head;
+    for(int i=1;i<a;i++){
+      prev=curr;
+      curr=curr->next;
+    }
+
+    Node* left=prev;
+    Node* start=curr;
+    Node* nextNode=NULL;
+    for(int i=0;i<=b-a;i++){
+      nextNode=curr->next;
+      curr->next=prev;
+      prev=curr;
+      curr=nextNode;
+    }
+    if(left!=NULL){
+      left->next=prev;
+    }
+    else{
+      head=prev;
+    }
+    start->next=curr;
+
+  return head;
+}
+
+//TC :O(N)
+//SC :O(1)
