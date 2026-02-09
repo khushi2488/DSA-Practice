@@ -29,3 +29,4 @@ void pushzerotoend2(vector<int>& arr){
 
 // TC :O(n)
 //SC :O(1)
+
