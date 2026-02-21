@@ -18,3 +18,20 @@ class Solution {
 
 //TC: O(n^2)
 //Sc:O(1)
+
+int maxsubarraysum2(vector<int> &arr){
+int maxSum=INT_MIN;
+int Sum = 0;
+for(int i=0;i<arr.size();i++){
+Sum+=arr[i];
+maxSum=max(maxSum,Sum);
+if(Sum<0){
+    Sum=0;
+}
+}
+
+return maxSum;
+}
+
+//TC:O(n)
+//SC : O(1)
