@@ -12,10 +12,23 @@ class Solution {
             e--;
         }
 
-return s;
+    return s;
         
     }
+    //TC : O(n)
+    //SC :O(1)
+
+
+    string reversestring2(string& s){
+        string reversest;
+        for(int i=s.length()-1;i>=0;i--){
+            reversest+=s[i];
+        }
+        return reversest;
+    }
+    //tc : O(n)
+    //SC : O(n)
 };
 
-//TC : O(n)
-//SC :O(1)
+
+
