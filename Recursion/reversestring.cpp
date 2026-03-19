@@ -10,7 +10,7 @@ void reverseString(string &s, int left, int right){
 //O(n)
 //O(n)// we use recursive stack
 
-
+//this is 
 void reversePrint(string s, int i){
     if(i<0){
         return ;
