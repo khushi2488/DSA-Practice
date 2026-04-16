@@ -28,5 +28,17 @@ void reversestack(stack<int>& s){
 s=temp;
 }
 
+void reversestack(stack<int> &st){
+    int n=st.size();
+    vector<int> res;
+    while(!st.empty()){
+        res.push_back(st.top());
+        st.pop();
+    }
+    for(int i=0;i<res.size();i++){
+        st.push(res[i]);
+    }
+}
+//O(n),O(n)
 
 };
